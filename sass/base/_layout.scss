@@ -1,4 +1,7 @@
-$max-width: 1000px;
+$max-width: 1000px !default;
+
+$content-margin-full: 20px;
+$media-max-width-full: ($max-width + ($content-margin-full * 2));
 
 *{
 	margin: 0;
@@ -10,8 +13,8 @@ body{
 	font-size: 14px;
 	background: $color-background;
 	color: $color-gray01;
-	@media screen and (max-width: 1040px){
-		margin: 0 20px;
+	@media screen and (max-width: $media-max-width-full){
+		margin: 0 $content-margin-full;
 	}
 	@media screen and (max-width: 600px){
 		font-size: 13px;
@@ -43,7 +46,7 @@ a{
 .inner{
 	width: $max-width;
 	margin: 0 auto;
-	@media screen and (max-width: 1040px){
+	@media screen and (max-width: $media-max-width-full){
 		width: 100%;
 	}
 }
